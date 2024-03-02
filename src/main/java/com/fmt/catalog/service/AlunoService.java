@@ -6,13 +6,11 @@ import java.util.ArrayList;
 
 public class AlunoService {
 
-    private static ArrayList<Aluno> alunosList = new ArrayList<>();
-
-    public ArrayList<Aluno> getTodosAlunos() {
-        return alunosList;
+    public ArrayList<Aluno> consultarTodosAlunos() {
+        return Aluno.alunosList;
     }
 
-    public void postAluno(Aluno aluno) {
-        alunosList.add(aluno);
+    public void cadastrarAluno(Aluno aluno) {
+        Aluno.inserirAlunoEmAlunosList(aluno);
     }
 }
