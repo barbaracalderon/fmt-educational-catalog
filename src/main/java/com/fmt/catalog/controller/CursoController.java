@@ -26,4 +26,9 @@ public class CursoController {
         cursoService.cadastrarCurso(curso);
     }
 
+    @PostMapping("/curso/{idCurso}/matricula")
+    public void matricularAlunoEmCurso(@PathVariable Integer idCurso, @RequestBody Integer idAluno) {
+        cursoService.matricularAlunoEmCurso(idCurso, idAluno);
+    }
+
 }

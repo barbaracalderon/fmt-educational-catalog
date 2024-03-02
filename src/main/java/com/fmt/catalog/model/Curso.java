@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Curso {
 
-    private static Integer proximoId = 1;
+    public static Integer proximoId = 1;
 
     @Getter
     private int id;
