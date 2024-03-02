@@ -6,15 +6,12 @@ import java.util.ArrayList;
 
 public class CursoService {
 
-    private static ArrayList<Curso> cursosList = new ArrayList<>();
-
-
-    public ArrayList<Curso> getTodosCursos() {
-        return cursosList;
+    public ArrayList<Curso> consultarTodosCursos() {
+        return Curso.cursosList;
     }
 
-    public void postCurso(Curso curso) {
-        cursosList.add(curso);
+    public void cadastrarCurso(Curso curso) {
+        Curso.inserirCursoEmCursosList(curso);
     }
 
 }
