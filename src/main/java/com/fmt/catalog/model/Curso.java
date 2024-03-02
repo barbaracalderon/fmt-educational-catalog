@@ -1,6 +1,7 @@
 package com.fmt.catalog.model;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,10 @@ public class Curso {
 
     public static ArrayList<Curso> cursosList = new ArrayList<>();
 
+    @Setter
+    @Getter
+    private ArrayList<Aluno> alunosMatriculadosList;
+
     public Curso(String nomeDoCurso, String descricao, int cargaHoraria) {
         this.id = proximoId++;
         this.nomeDoCurso = nomeDoCurso;
@@ -33,4 +38,7 @@ public class Curso {
         cursosList.add(curso);
     }
 
+    public void setAlunosMatriculados(ArrayList<Aluno> alunosMatriculados) {
+        alunosMatriculadosList = alunosMatriculados;
+    }
 }
