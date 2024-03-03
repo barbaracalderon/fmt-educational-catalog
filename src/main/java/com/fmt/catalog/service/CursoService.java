@@ -21,7 +21,7 @@ public class CursoService {
     }
 
     public Curso encontrarCursoPorId(Integer id) {
-        return Curso.getCursoDaLista(id - 1);
+        return Curso.getCursoDaListaPorId(id);
     }
 
     public void matricularAlunoEmCurso(Integer idCurso, Integer idAluno) {

@@ -1,13 +1,15 @@
 package com.fmt.catalog.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 
+@Data
 public class Curso {
 
-    public static Integer proximoId = 1;
+    public static int proximoId = 1;
 
     @Getter
     private int id;
@@ -42,7 +44,12 @@ public class Curso {
         alunosMatriculadosList = alunosMatriculados;
     }
 
-    public static Curso getCursoDaLista(Integer id) {
-        return cursosList.get(id);
+    public static Curso getCursoDaListaPorId(Integer id) {
+        for (Curso curso: cursosList) {
+            if (curso.getId() == id) {
+                return curso;
+            }
+        }
+        return null;
     }
 }

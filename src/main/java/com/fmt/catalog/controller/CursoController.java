@@ -21,7 +21,7 @@ public class CursoController {
         return cursoService.consultarTodosCursos();
     }
 
-    @GetMapping("/curso/{idCurso}")
+    @GetMapping("{idCurso}")
     public Curso getCurso(@PathVariable Integer idCurso) {
         return cursoService.encontrarCursoPorId(idCurso);
     }
@@ -31,7 +31,7 @@ public class CursoController {
         cursoService.cadastrarCurso(curso);
     }
 
-    @PostMapping("/curso/{idCurso}/matricula")
+    @PostMapping("{idCurso}/matricula")
     public void matricularAlunoEmCurso(@PathVariable Integer idCurso, @RequestBody Integer idAluno) {
         cursoService.matricularAlunoEmCurso(idCurso, idAluno);
     }
