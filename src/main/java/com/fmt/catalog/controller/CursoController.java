@@ -21,6 +21,11 @@ public class CursoController {
         return cursoService.consultarTodosCursos();
     }
 
+    @GetMapping("/curso/{idCurso}")
+    public Curso getCurso(@PathVariable Integer idCurso) {
+        return cursoService.encontrarCursoPorId(idCurso);
+    }
+
     @PostMapping
     public void postCurso(@RequestBody Curso curso) {
         cursoService.cadastrarCurso(curso);

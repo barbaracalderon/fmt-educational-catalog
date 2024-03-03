@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Service
 public class CursoService {
 
-    AlunoService alunoService;
+    static AlunoService alunoService;
 
 
     public ArrayList<Curso> consultarTodosCursos() {
@@ -21,7 +21,7 @@ public class CursoService {
     }
 
     public Curso encontrarCursoPorId(Integer id) {
-        return Curso.cursosList.get(id);
+        return Curso.getCursoDaLista(id - 1);
     }
 
     public void matricularAlunoEmCurso(Integer idCurso, Integer idAluno) {

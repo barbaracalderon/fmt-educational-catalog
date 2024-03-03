@@ -41,4 +41,8 @@ public class Curso {
     public void setAlunosMatriculados(ArrayList<Aluno> alunosMatriculados) {
         alunosMatriculadosList = alunosMatriculados;
     }
+
+    public static Curso getCursoDaLista(Integer id) {
+        return cursosList.get(id);
+    }
 }
