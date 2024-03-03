@@ -21,6 +21,11 @@ public class AlunoController {
         return alunoService.consultarTodosAlunos();
     }
 
+    @GetMapping("/{idAluno}")
+    public Aluno getAluno(@PathVariable Integer idAluno) {
+        return alunoService.encontrarAlunoPorId(idAluno);
+    }
+
     @PostMapping
     public void postAluno(@RequestBody Aluno aluno) {
         alunoService.cadastrarAluno(aluno);

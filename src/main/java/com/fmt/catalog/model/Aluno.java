@@ -34,4 +34,13 @@ public class Aluno {
     }
 
 
+    public static Aluno getAlunoDaListaPorId(Integer id) {
+        for (Aluno aluno: alunosList) {
+            if (aluno.getId() == id) {
+                return aluno;
+            }
+        }
+        return null;
+    }
+
 }

@@ -17,7 +17,7 @@ public class AlunoService {
     }
 
     public Aluno encontrarAlunoPorId(Integer id) {
-        return Aluno.alunosList.get(id);
+        return Aluno.getAlunoDaListaPorId(id);
     }
 
 }
