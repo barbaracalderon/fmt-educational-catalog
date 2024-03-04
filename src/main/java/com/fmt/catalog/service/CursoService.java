@@ -9,7 +9,11 @@ import java.util.ArrayList;
 @Service
 public class CursoService {
 
-    static AlunoService alunoService;
+    private final AlunoService alunoService;
+
+    public CursoService(AlunoService alunoService) {
+        this.alunoService = alunoService;
+    }
 
 
     public ArrayList<Curso> consultarTodosCursos() {
@@ -24,6 +28,7 @@ public class CursoService {
         return Curso.getCursoDaListaPorId(id);
     }
 
+
     public void matricularAlunoEmCurso(Integer idCurso, Integer idAluno) {
         Curso curso = encontrarCursoPorId(idCurso);
         Aluno aluno = alunoService.encontrarAlunoPorId(idAluno);
@@ -31,7 +36,9 @@ public class CursoService {
         if (curso != null && aluno != null) {
             ArrayList<Aluno> alunosMatriculados = curso.getAlunosMatriculadosList();
             alunosMatriculados.add(aluno);
-            curso.setAlunosMatriculados(alunosMatriculados);
+            curso.setAlunosMatriculadosList(alunosMatriculados);
+        } else {
+            throw new IllegalArgumentException("Curso ou aluno não encontrado.");
         }
     }
 
