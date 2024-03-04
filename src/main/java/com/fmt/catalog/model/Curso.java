@@ -27,7 +27,7 @@ public class Curso {
 
     @Setter
     @Getter
-    private ArrayList<Aluno> alunosMatriculadosList;
+    private ArrayList<Aluno> alunosMatriculadosList = new ArrayList<>();
 
     public Curso(String nomeDoCurso, String descricao, int cargaHoraria) {
         this.id = proximoId++;
@@ -40,10 +40,6 @@ public class Curso {
         cursosList.add(curso);
     }
 
-    public void setAlunosMatriculados(ArrayList<Aluno> alunosMatriculados) {
-        alunosMatriculadosList = alunosMatriculados;
-    }
-
     public static Curso getCursoDaListaPorId(Integer id) {
         for (Curso curso: cursosList) {
             if (curso.getId() == id) {
@@ -52,4 +48,5 @@ public class Curso {
         }
         return null;
     }
+
 }
