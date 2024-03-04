@@ -1,10 +1,13 @@
 package com.fmt.catalog.controller;
 
+import com.fmt.catalog.model.Aluno;
 import com.fmt.catalog.model.Curso;
+import com.fmt.catalog.model.IdentificadorAluno;
 import com.fmt.catalog.service.CursoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+
 
 @RestController
 @RequestMapping("/curso")
@@ -32,8 +35,8 @@ public class CursoController {
     }
 
     @PostMapping("{idCurso}/matricula")
-    public void matricularAlunoEmCurso(@PathVariable Integer idCurso, @RequestBody Integer idAluno) {
-        cursoService.matricularAlunoEmCurso(idCurso, idAluno);
+    public void matricularAlunoEmCurso(@PathVariable Integer idCurso, @RequestBody IdentificadorAluno idAluno) {
+        cursoService.matricularAlunoEmCurso(idCurso, idAluno.getIdAluno());
     }
 
 }
