@@ -67,7 +67,7 @@ O servidor será iniciado em http://localhost:8080.
 Você pode testar os endpoints utilizando ferramentas como o Insomnia, Postman ou cURL. 
 Abaixo estão alguns exemplos de como testar os endpoints:
 
-## Testando os Endpoints
+### Testando os Endpoints
 
 Você pode testar os endpoints utilizando ferramentas como Postman ou Insomnia. Por exemplo:
 
