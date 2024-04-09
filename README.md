@@ -4,6 +4,13 @@ Este é um projeto inicial de base para uma RESTful API de catálogo, que gerenc
 foi desenvolvida em Java e Spring Boot para gerenciar alunos e cursos --- como primeiro contato com o Spring Boot.
 Não possui persistência de dados. Desenvolvido na semana 8 do módulo de Backend Java, Lab 365, SENAI - Florianópolis, SC. 
 
+## Autor
+
+Sou a Barbara Calderon, desenvolvedora de software.
+- [Github](https://www.github.com/barbaracalderon)
+- [Linkedin](https://www.linkedin.com/in/barbaracalderondev)
+- [Twitter](https://www.x.com/bederoni)
+
 ## Tecnologias Utilizadas
 
 - **Java 17**: linguagem de programação Java com JDK 17.
