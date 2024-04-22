@@ -1,8 +1,8 @@
-# FMT Educational Catalog Restful API
+# Educational Catalog Restful API
 
 Este é um projeto inicial de base para uma RESTful API de catálogo, que gerencia alunos e cursos. Bastante simples,
 foi desenvolvida em Java e Spring Boot para gerenciar alunos e cursos --- como primeiro contato com o Spring Boot.
-Não possui persistência de dados. Desenvolvido na semana 8 do módulo de Backend Java, Lab 365, SENAI - Florianópolis, SC. 
+Não possui persistência de dados. 
 
 ## Autor
 
